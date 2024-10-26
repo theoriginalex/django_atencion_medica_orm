@@ -5,6 +5,7 @@ from django.db.models import Sum,Avg,Max,Min,Count
 from django.db.models import F
 # insertar registro directamente
 tipo1 = TipoSangre.objects.create(tipo="C+", descripcion="Tipo C positivo")
+
 """
 In [18]: tipo1 = TipoSangre.objects.create(tipo="C+", descripcion="Tipo C positivo")
 INSERT INTO "core_tiposangre" ("tipo", "descripcion")
@@ -16,6 +17,7 @@ In [19]: tipo1
 Out[19]: <TipoSangre: C+>
 
 """
+
 # crea el registro en memoria
 tipo2 = TipoSangre(tipo="C-", descripcion="Tipo C negativo")
 tipo2.save()  # Y luego con save() lo guarda el registro en la base de datos
